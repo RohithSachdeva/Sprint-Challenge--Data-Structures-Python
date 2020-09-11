@@ -40,3 +40,4 @@ class LinkedList:
 
     def reverse_list(self, node, prev):
         pass
+
