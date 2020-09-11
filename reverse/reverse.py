@@ -39,4 +39,21 @@ class LinkedList:
         return False
 
     def reverse_list(self, node, prev):
-        pass
+        if node is None:
+            self.head = prev
+            return
+        node_next = node.get_next()
+        node.set_next(prev)
+        self.reverse_list(node_next, node)
+
+
+
+"""
+So need to check for node? ..  Set next to previous ... return self.reverse 
+Each node needs to point at prev_node
+Head and tail pointers need to be flipped ... 
+
+optimal solution includes empty/one node scenarios... From Matt's lecture... can skip that for now 
+test passed but possibly come back and improve this solution 
+"""
+
